@@ -1,4 +1,8 @@
 ```Swift
+//  ContentView.swift
+//  project 1 - weSplit
+//  Created by amor on 24.06.21
+
 import SwiftUI
 
 struct ContentView: View {
