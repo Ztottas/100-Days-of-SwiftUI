@@ -1,4 +1,4 @@
-# 100-Days-of-SwiftUI
+# 100 Days of  SwiftUI
 
 This is where I will try to put my solutions to Paul Hudson's challenges in his [100 days of swiftUI](https://www.hackingwithswift.com/100/swiftui) course. *
 
