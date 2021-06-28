@@ -68,7 +68,7 @@ struct ContentView: View {
     }
 }
 ```
-
+<br/><br/>
 ## Grid Challenge
 
 <img src="https://user-images.githubusercontent.com/86367196/123612537-eea11380-d802-11eb-95e7-35cd5f8ad393.png" height="500">
@@ -100,8 +100,7 @@ struct ContentView: View {
 }
 ```
 
-<br/>
-
+<br/><br/>
 ## Color and frames
 
 <img src="https://user-images.githubusercontent.com/86367196/123636314-fff71980-d81c-11eb-905d-ee8395b87dc5.png" height="500">
@@ -131,12 +130,10 @@ struct ContentView: View {
 }
 ```
 
-<br/>
-
+<br/><br/>
 ## Gradients
 
 <img src="https://user-images.githubusercontent.com/86367196/123637909-d50dc500-d81e-11eb-9d3f-cabd17bce44a.jpg" height="500">
-
 
 #### LinearGradient
 
@@ -173,6 +170,47 @@ struct ContentView: View {
     var body: some View {
         AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
 	.edgesIgnoringSafeArea(.all)
+    }
+}
+```
+
+<br/><br/>
+## Buttons
+
+<img src="https://user-images.githubusercontent.com/86367196/123653317-52403680-d82d-11eb-9d2e-819b2890f1bb.jpg" height="500">
+
+#### Simple text button
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+	//Version for a simple text button with the action
+        Button("Tap me!") {
+            print("Button tapped.")
+        }
+    }
+}
+```
+
+#### Button with Image
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        //Version for a button containing an image
+        Button(action: {
+            print("Button tapped.")
+        }) {
+            HStack{
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.red)
+                Text("Tap me!")
+            }
+        }
     }
 }
 ```
