@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/86367196/123614780-eea21300-d804-11eb-968b-76482990e3c2.jpg" height="500">
 
-### VStack
+#### VStack
 
 ```Swift
 struct ContentView: View {
