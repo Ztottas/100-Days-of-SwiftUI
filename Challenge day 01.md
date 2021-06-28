@@ -22,7 +22,7 @@ struct ContentView: View {
     @State private var fromVolumeSystem = 0
     @State private var toVolumeSystem = 0
     //pickers arrays
-    var units = ["Temperature", "Length", "Time", "Volune"]
+    var units = ["Temp.", "Length", "Time", "Volune"]
     var lengthSystem = ["Metric", "US/Imperial", "Nautical"]
     var volumeSystem = ["Metric", "US customary", "Imperial"]
     var tempUnits = ["Celsius", "Fahrenheit", "Kelvin"]
@@ -227,6 +227,11 @@ struct ContentView: View {
                 //text fielf for user imput value
                 TextField("Enter the value to convert", text: $valueForConversion)
                     .keyboardType(.decimalPad)
+                if valueForConversion != "" {
+                    Text("\(genericToDesireValue)\(abbreviation)")
+                } else {
+                    Text("")
+                }
                 //picker for TYPE of measurement
                 Section(header: Text("Convert from:").textCase(nil)) {
                     Picker("Units", selection: $unit) {
@@ -310,7 +315,7 @@ struct ContentView: View {
                     }
                 }
                 //repit the pickers for the FINAL System and unit of measurement
-                Section(header: Text("Convert To").textCase(nil)) {
+                Section(header: Text("Convert to:").textCase(nil)) {
                     //picker for Length measurements:
                     if unit == 1  {
                         Picker("Length System:", selection: $toLengthSystem) {
@@ -381,14 +386,6 @@ struct ContentView: View {
                         }
                         .pickerStyle(SegmentedPickerStyle())
                         .padding(.bottom, 44)
-                    }
-                }
-                // Section with the converted user value
-                Section  {
-                    if valueForConversion != "" {
-                        Text("\(genericToDesireValue)\(abbreviation)")
-                    } else {
-                        Text("")
                     }
                 }
             }
