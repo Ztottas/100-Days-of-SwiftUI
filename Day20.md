@@ -214,3 +214,33 @@ struct ContentView: View {
     }
 }
 ```
+<br/><br/>
+## Alerts
+
+<img src="https://user-images.githubusercontent.com/86367196/123661564-ef529d80-d834-11eb-89cb-416728ac6f3f.jpg" height="500">
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    //creating a State for the alert
+    @State private var showingAlert = false
+    
+    var body: some View {
+        //Create the button
+        Button(action: {
+            //action will be make the State for the alert true
+            showingAlert = true
+        }) {
+            HStack {
+                Image(systemName: "heart.fill")
+                    .foregroundColor(.red)
+                Text("Tap me")
+            }
+        }
+        //alert "Observer?". With two-way binding State -> dismiss puts the State as false
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Hello SwiftUI"), message: Text("This is some detail message"), dismissButton: .default(Text("OK")))
+        }
+    }
+}
