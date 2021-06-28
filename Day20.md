@@ -145,7 +145,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [.red, .green]), startPoint: .top, endPoint: .bottom
-			.edgesIgnoringSafeArea(.all)
+	.edgesIgnoringSafeArea(.all)
     }
 }
 ```
@@ -158,7 +158,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 0, endRadius: 200)
-			.edgesIgnoringSafeArea(.all)
+	.edgesIgnoringSafeArea(.all)
     }
 }
 ```
@@ -171,7 +171,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
-            .edgesIgnoringSafeArea(.all)
+	.edgesIgnoringSafeArea(.all)
     }
 }
 ```
