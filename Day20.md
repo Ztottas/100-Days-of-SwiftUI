@@ -1,4 +1,5 @@
-# Day 20
+# Day 20 / [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
+
 ## Stacks
 
 <img src="https://user-images.githubusercontent.com/86367196/123614780-eea21300-d804-11eb-968b-76482990e3c2.jpg" height="500">
