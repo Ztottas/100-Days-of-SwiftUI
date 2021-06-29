@@ -25,7 +25,7 @@ struct ContentView: View {
 struct ContentView: View {
     var body: some View {
         //Horizontal Stack of views
-		//with a optional spacing
+	//with a optional spacing
         HStack(spacing: 20) {
             Text("Hello, world!")
             Text("This is another text view")
@@ -45,7 +45,7 @@ struct ContentView: View {
             Text("First")
             Text("Second")
             //Spacer view that takes the max of the available space
-			//“more than one spacer will divide the available space…”
+	    //“more than one spacer will divide the available space…”
             Spacer()
             Text("Third")
         }
