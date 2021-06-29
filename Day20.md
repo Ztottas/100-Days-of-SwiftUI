@@ -2,7 +2,7 @@
 
 ## Stacks
 
-<img src="https://user-images.githubusercontent.com/86367196/123799929-0357d700-d8e9-11eb-8d7c-c70ae4cca9c1.png" width="718" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123831617-cdc0e700-d904-11eb-8397-3173f717b890.png" width="718" object-fit="cover">
 
 #### VStack
 
@@ -71,7 +71,7 @@ struct ContentView: View {
 <br/><br/>
 ## Grid Challenge
 
-<kbd><img src="https://user-images.githubusercontent.com/86367196/123612537-eea11380-d802-11eb-95e7-35cd5f8ad393.png" width="179" object-fit="cover"></kbd>
+<img src="https://user-images.githubusercontent.com/86367196/123831728-e7fac500-d904-11eb-93c6-5687251f4544.png" width="179" object-fit="cover">
 
 
 ```Swift
@@ -103,7 +103,7 @@ struct ContentView: View {
 <br/><br/>
 ## Color and frames
 
-<kbd><img src="https://user-images.githubusercontent.com/86367196/123636314-fff71980-d81c-11eb-905d-ee8395b87dc5.png" width="179" object-fit="cover"></kbd>
+<img src="https://user-images.githubusercontent.com/86367196/123831813-fe088580-d904-11eb-88c5-e02f22815c4b.png" width="179" object-fit="cover">
 
 ```Swift
 import SwiftUI
@@ -133,7 +133,7 @@ struct ContentView: View {
 <br/><br/>
 ## Gradients
 
-<img src="https://user-images.githubusercontent.com/86367196/123802201-5468ca80-d8eb-11eb-8722-d90fe973e97f.png" width="538" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123831862-0a8cde00-d905-11eb-8e44-5e6bc90cb704.png" width="538" object-fit="cover">
 
 #### LinearGradient
 
@@ -177,7 +177,7 @@ struct ContentView: View {
 <br/><br/>
 ## Buttons
 
-<img src="https://user-images.githubusercontent.com/86367196/123653317-52403680-d82d-11eb-9d2e-819b2890f1bb.jpg" width="359" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123831917-19739080-d905-11eb-82f7-d53de42a9398.png" width="359" object-fit="cover">
 
 #### Simple text button
 
@@ -217,7 +217,7 @@ struct ContentView: View {
 <br/><br/>
 ## Alerts
 
-<img src="https://user-images.githubusercontent.com/86367196/123661564-ef529d80-d834-11eb-89cb-416728ac6f3f.jpg" width="359" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123831976-285a4300-d905-11eb-883c-b3fcf676c055.png" width="359" object-fit="cover">
 
 ```Swift
 import SwiftUI
