@@ -31,6 +31,7 @@ struct ContentView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.black, Color.blue]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
+                
             VStack(spacing: 30) {
                 VStack {
                     Text("Tap the flag of")
@@ -55,9 +56,11 @@ struct ContentView: View {
                             .shadow(color: .white, radius: 1)
                     }
                 }
+                
                 //.CHALLENGE 2 - showing players score below the flags
                 Text("Your current score is: \(score)")
                     .foregroundColor(.white)
+                    
                 Spacer()
             }
         }
