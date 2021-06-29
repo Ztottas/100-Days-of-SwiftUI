@@ -71,7 +71,7 @@ struct ContentView: View {
 <br/><br/>
 ## Grid Challenge
 
-<img src="https://user-images.githubusercontent.com/86367196/123612537-eea11380-d802-11eb-95e7-35cd5f8ad393.png" width="179" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123612537-eea11380-d802-11eb-95e7-35cd5f8ad393.png" width="179" object-fit="cover" border="1">
 
 
 ```Swift
