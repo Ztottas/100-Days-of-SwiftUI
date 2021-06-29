@@ -2,7 +2,7 @@
 
 ## Stacks
 
-<img src="https://user-images.githubusercontent.com/86367196/123614780-eea21300-d804-11eb-968b-76482990e3c2.jpg"  width="718" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123798661-b3c4db80-d8e7-11eb-86a9-27d58b5af740.png" width="718" object-fit="cover">
 
 #### VStack
 
@@ -103,7 +103,7 @@ struct ContentView: View {
 <br/><br/>
 ## Color and frames
 
-<img src="https://user-images.githubusercontent.com/86367196/123636314-fff71980-d81c-11eb-905d-ee8395b87dc5.png" width="179" object-fit="cover">
+<kbd><img src="https://user-images.githubusercontent.com/86367196/123636314-fff71980-d81c-11eb-905d-ee8395b87dc5.png" width="179" object-fit="cover"></kbd>
 
 ```Swift
 import SwiftUI
