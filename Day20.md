@@ -2,7 +2,7 @@
 
 ## Stacks
 
-<img src="https://user-images.githubusercontent.com/86367196/123614780-eea21300-d804-11eb-968b-76482990e3c2.jpg" height="500">
+<img src="https://user-images.githubusercontent.com/86367196/123614780-eea21300-d804-11eb-968b-76482990e3c2.jpg"  width="718" object-fit="cover">
 
 #### VStack
 
@@ -71,7 +71,7 @@ struct ContentView: View {
 <br/><br/>
 ## Grid Challenge
 
-<img src="https://user-images.githubusercontent.com/86367196/123612537-eea11380-d802-11eb-95e7-35cd5f8ad393.png" height="500">
+<img src="https://user-images.githubusercontent.com/86367196/123612537-eea11380-d802-11eb-95e7-35cd5f8ad393.png" width="179" object-fit="cover">
 
 
 ```Swift
@@ -103,7 +103,7 @@ struct ContentView: View {
 <br/><br/>
 ## Color and frames
 
-<img src="https://user-images.githubusercontent.com/86367196/123636314-fff71980-d81c-11eb-905d-ee8395b87dc5.png" height="500">
+<img src="https://user-images.githubusercontent.com/86367196/123636314-fff71980-d81c-11eb-905d-ee8395b87dc5.png" width="179" object-fit="cover">
 
 ```Swift
 import SwiftUI
@@ -133,7 +133,7 @@ struct ContentView: View {
 <br/><br/>
 ## Gradients
 
-<img src="https://user-images.githubusercontent.com/86367196/123637909-d50dc500-d81e-11eb-9d3f-cabd17bce44a.jpg" height="500">
+<img src="https://user-images.githubusercontent.com/86367196/123637909-d50dc500-d81e-11eb-9d3f-cabd17bce44a.jpg" width="538" object-fit="cover">
 
 #### LinearGradient
 
@@ -177,7 +177,7 @@ struct ContentView: View {
 <br/><br/>
 ## Buttons
 
-<img src="https://user-images.githubusercontent.com/86367196/123653317-52403680-d82d-11eb-9d2e-819b2890f1bb.jpg" height="500">
+<img src="https://user-images.githubusercontent.com/86367196/123653317-52403680-d82d-11eb-9d2e-819b2890f1bb.jpg" width="359" object-fit="cover">
 
 #### Simple text button
 
@@ -217,7 +217,7 @@ struct ContentView: View {
 <br/><br/>
 ## Alerts
 
-<img src="https://user-images.githubusercontent.com/86367196/123661564-ef529d80-d834-11eb-89cb-416728ac6f3f.jpg" height="500">
+<img src="https://user-images.githubusercontent.com/86367196/123661564-ef529d80-d834-11eb-89cb-416728ac6f3f.jpg" width="359" object-fit="cover">
 
 ```Swift
 import SwiftUI
