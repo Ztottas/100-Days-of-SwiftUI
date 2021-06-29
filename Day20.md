@@ -2,7 +2,7 @@
 
 ## Stacks
 
-<img src="https://user-images.githubusercontent.com/86367196/123798661-b3c4db80-d8e7-11eb-86a9-27d58b5af740.png" width="718" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123799929-0357d700-d8e9-11eb-8d7c-c70ae4cca9c1.png" width="718" object-fit="cover">
 
 #### VStack
 
@@ -133,7 +133,7 @@ struct ContentView: View {
 <br/><br/>
 ## Gradients
 
-<img src="https://user-images.githubusercontent.com/86367196/123637909-d50dc500-d81e-11eb-9d3f-cabd17bce44a.jpg" width="538" object-fit="cover">
+<img src="https://user-images.githubusercontent.com/86367196/123802201-5468ca80-d8eb-11eb-8722-d90fe973e97f.png" width="538" object-fit="cover">
 
 #### LinearGradient
 
