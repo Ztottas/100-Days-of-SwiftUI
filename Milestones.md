@@ -28,7 +28,7 @@ import SwiftUI
         // Mile 1 - CHL 1 - Creation of an array of possibilities for random selection by the application
         // in this case in every level the array will be shufle...
         @State private var handImages = ["rock.hand", "paper.hand", "scissor.hand"].shuffled()
-        // Mile 1 - CHL 2 (1/2) - The option for win or loose and a Boolean
+        // Mile 1 - CHL 2 (1/2) - The option for win or loose as a Boolean
         @State private var toWin = Bool.random()
         @State private var score = 0
         // Mile 1 - CHL 5 (1/3) - Add a value for the number of turns
@@ -61,7 +61,7 @@ import SwiftUI
         }
         .padding()
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Congradulations you final Score is \(score)"), message: Text(""), dismissButton:
+            Alert(title: Text("Congradulations your final Score is: \(score)"), message: Text(""), dismissButton:
                 .default (Text("OK")) {
                     self.score = 0
                     self.levelsPlayed = 0
