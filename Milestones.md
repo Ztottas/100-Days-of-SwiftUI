@@ -61,7 +61,7 @@ import SwiftUI
         }
         .padding()
         .alert(isPresented: $showAlert) {
-            Alert(title: Text("Congradulations your final score is: \(score)"), message: Text(""), dismissButton:
+            Alert(title: Text("Congradulations your final score is: \(score) in 10"), message: Text(""), dismissButton:
                 .default (Text("OK")) {
                     self.score = 0
                     self.levelsPlayed = 0
