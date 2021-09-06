@@ -16,5 +16,5 @@ Project|Screenshots
 ### * Thank you Paul
 
 
-P.S. - Due to work, I will have to take a 4 week break from my 100 days of swiftUI. I will try my best to keep going otherwise I will be back in August.
+P.S. - Due to work, I will have to take some weeks break from my 100 days of swiftUI. I will try my best to keep going otherwise I will be back in mid-September.
 It is being a very interesting and challenging journey.
