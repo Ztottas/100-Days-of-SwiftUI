@@ -1,3 +1,241 @@
+# Day 16 / [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
+
+## Creating a Form
+
+<img src="https://user-images.githubusercontent.com/86367196/132347014-1873df9a-4eaf-4215-8a88-7b3cff477b68.png" width="760" object-fit="cover">
+
+#### Simple Form
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        //Simple form with text
+        Form {
+            Text("HelloWorld")
+        }
+    }
+}
+```
+#### Simple form with several lines of text
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        //Simple form with several lines of text
+        Form {
+            Text("Line 1")
+            Text("Line 2")
+            Text("Line 3")
+        }
+    }
+}
+```
+#### Simple Form in Groups
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        //Simple form several lines of text in two groups
+        //Groups are needed if we want more than 10 children in a form.
+        Form {
+            Group {
+                Group {
+                    Text("Text 1 - Group 1")
+                    Text("Text 2 - Group 1")
+                }
+                Group {
+                    Text("Text 1 - Group 2")
+                    Text("Text 2 - Group 2")
+                }
+            }
+        }
+    }
+}
+```
+
+#### Simple Form in sections
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        //Forms can be separated into sections to visually create a space between them.
+        Form {
+            Section {
+                Text("Section 1")
+            }
+            Section {
+                Text("Section 2")
+            }
+        }
+    }
+}
+```
+<br/><br/>
+## Navigation bar
+
+<img src="https://user-images.githubusercontent.com/86367196/132347059-d4d1a31f-6524-4660-9d9d-ceb58d62a5b9.png" width="570" object-fit="cover">
+
+#### adding a navigation bar
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        //Adding a navigation bar
+        NavigationView {
+            Form {
+                Text("line 1")
+                Text("line 2")
+                Text("line 3")
+                Text("line 4")
+            }
+        }
+    }
+}
+```
+
+#### Title in the navigation bar
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        //Adding a navigation bar
+        NavigationView {
+            Form {
+                Text("line 1")
+                Text("line 2")
+                Text("line 3")
+                Text("line 4")
+            }
+            //adding a title to the navigation bar
+            .navigationBarTitle("SwiftUI")
+            //also works like this...
+            //.navigationTitle(Text("SwiftUI"))
+        }
+    }
+}
+```
+
+#### Title in small letters
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        //Adding a navigation bar
+        NavigationView {
+            Form {
+                Text("line 1")
+                Text("line 2")
+                Text("line 3")
+                Text("line 4")
+            }
+            //Title in small letters
+            .navigationBarTitle("SwiftUI", displayMode: .inline)
+        }
+    }
+}
+```
+<br/><br/>
+##  Modify program state
+
+<img src="https://user-images.githubusercontent.com/86367196/132347087-9bf75f09-db9d-48f2-9826-6947d81ace00.png" width="190" object-fit="cover">
+
+```Swift
+struct ContentView: View {
+    //create a property that stores the tap count number
+    @State private var tapCount = 0
+    
+    var body: some View {
+        //create a button with a title...
+        //+ a closure that adds 1 (to “tapCount”) each time it is pressed
+        Button("Tap count \(tapCount)") {
+            tapCount += 1
+        }
+    }
+}
+```
+<br/><br/>
+##  Two-way binding
+
+<img src="https://user-images.githubusercontent.com/86367196/132347099-ef3389d9-38e8-426f-94d0-03c86f7464ae.png" width="190" object-fit="cover">
+
+```Swift
+struct ContentView: View {
+    //create a property that stores user input
+    @State private var name = ""
+    
+    var body: some View {
+        Form {
+            //create a textField with a message to guide the user and a two-way binding ("$") for the "name" property.
+            //Two-way binding ("$") makes it possible to read and change the property.
+            TextField("Enter your name", text: $name)
+            //Simple text view that only reads our "name" property.
+            Text("Your name is: \(name)")
+        }
+    }
+}
+```
+<br/><br/>
+##  Creating views in a loop
+
+<img src="https://user-images.githubusercontent.com/86367196/132347105-7c9b63e3-aa94-4b39-af34-7867de7db063.png" width="380" object-fit="cover">
+
+#### Loop
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        Form {
+            //Create aupe from 0 to 15 (excluding)
+            ForEach(0 ..< 15) { number in
+                //for each passage add a text with row and number   
+                Text("Row \(number)")
+            }
+        }
+    }
+}
+```
+#### Loop with shorthand syntax
+
+```Swift
+struct ContentView: View {
+    var body: some View {
+        Form {
+            ForEach(0 ..< 15) {
+                //Because ForEach passes in a closure, we can use shorthand syntax for the parameter name
+                Text("Row \($0)")
+            }
+        }
+    }
+}
+```
+
+#### Picker with a loop
+
+```Swift
+struct ContentView: View {
+    //Create a constant with our list of students.
+    let students = ["Harry", "Hermione", "Ron"]
+    //Create a property to hold the user's selection.
+    @State private var selectedStudent = 1
+    
+    var body: some View {
+        VStack { //  <-- this makes a vertical stacks of views
+            //Create a two-way biding picker for the selectedStudent property.
+            Picker("Select your student", selection: $selectedStudent) {
+                //In the picker closure do a loop on our students constant...
+                ForEach(0 ..< students.count) {
+                    //...and create a text view for each value
+                    Text(self.students[$0])
+                }
+            }
+            //Thow the user's choice
+            Text("You chose: \(students[selectedStudent])")
+        }
+    }
+}
+```
+
+<br/><br/>
 # Day 20 / [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
 
 ## Stacks
