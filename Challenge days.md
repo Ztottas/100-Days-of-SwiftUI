@@ -46,7 +46,7 @@ struct ContentView: View {
         let kevinToCelsius = userValue - 237.15
         let mmToMeters = userValue / 1000
         let cmToMeters = userValue / 100
-        let kmToMeters = userValue * 10
+        let kmToMeters = userValue * 1000
         let inchToMeter = userValue / 39.37
         let footToMeter = userValue / 3.281
         let yardToMeter = userValue / 1.094
@@ -115,7 +115,7 @@ struct ContentView: View {
         let celsiusTokevin = userValue + 237.15
         let meterToMillimeter = userValue * 1000
         let meterToCentimeter = userValue * 100
-        let meterToKilometer = userValue / 10
+        let meterToKilometer = userValue / 1000
         let meterToInch = userValue * 39.37
         let meterToFoot = userValue * 3.281
         let meterToYard = userValue * 1.094
