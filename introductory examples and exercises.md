@@ -39,14 +39,12 @@ struct ContentView: View {
         //Groups are needed if we want more than 10 children in a form.
         Form {
             Group {
-                Group {
-                    Text("Text 1 - Group 1")
-                    Text("Text 2 - Group 1")
-                }
-                Group {
-                    Text("Text 1 - Group 2")
-                    Text("Text 2 - Group 2")
-                }
+                Text("Text 1 - Group 1")
+                Text("Text 2 - Group 1")
+            }
+            Group {
+                Text("Text 1 - Group 2")
+                Text("Text 2 - Group 2")
             }
         }
     }
