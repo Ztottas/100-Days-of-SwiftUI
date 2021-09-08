@@ -529,7 +529,7 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.yellow)
             VStack() { 
-	    // "VStack(spacing: 0)" - Will remove the space between views
+	// "VStack(spacing: 0)" - Will remove the space between views
                 Text("Hello, world!")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.red)
@@ -538,6 +538,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.gray)
                     .edgesIgnoringSafeArea(.all)
+		 // .padding(.top, -8)" - This can also solve the spacing between Stack views, in this case adjusting only one view.
             }
         }
     }
