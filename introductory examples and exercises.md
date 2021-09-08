@@ -528,7 +528,8 @@ struct ContentView: View {
             Text("XXXXX")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.yellow)
-            VStack() {
+            VStack() { 
+	    // "VStack(spacing: 0)" - Will remove the space between views
                 Text("Hello, world!")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.red)
