@@ -523,13 +523,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-	// Trying it out I realise there is space between views that I cannot fill, I will certainly find a logical solution in a later class
         ZStack() {
             Text("XXXXX")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.yellow)
             VStack() { 
-	// "VStack(spacing: 0)" - Will remove the space between views
+	// "VStack(spacing: 0)" - Will remove the space (always present) between views
                 Text("Hello, world!")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.red)
@@ -538,7 +537,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.gray)
                     .edgesIgnoringSafeArea(.all)
-		 // .padding(.top, -8)" - This can also solve the spacing between Stack views, in this case adjusting only one view.
+		 // .padding(.top, -8)" - This can also solve the spacing between Stack views, in this case adjusting only this last Text view.
             }
         }
     }
