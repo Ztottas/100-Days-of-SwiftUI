@@ -814,7 +814,7 @@ struct ContentView: View {
 
 #### Creating acustom Container 
 ```Swift
-import SwiftUI
+
 import SwiftUI
 
 struct GridStack<Content: View>: View {
@@ -845,6 +845,177 @@ struct ContentView: View {
                 Text("R\(row)-C\(col)")
             }
         }
+    }
+}
+```
+<br/><br/>
+# Day 26 / [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
+
+## Stepper
+
+<img src="https://user-images.githubusercontent.com/86367196/134400773-56a5f33f-5bff-46ce-892f-6a22d757f50c.png" width="380" object-fit="cover">
+
+#### Creating basic Stepper
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    //Property to store our number of hours
+    @State private var sleepAmount = 8.0
+    
+    var body: some View {
+        //Stepper associated to our property, within a range of numbers and with an increment of 0.25hours.
+        Stepper(value: $sleepAmount, in: 4...12, step: 0.25) {
+            //Simple text associated to our property, with "%g - specifier" to remove extra zeros to the right
+            Text("\(sleepAmount, specifier: "%g") hours")
+        }
+    }
+}
+```
+<br/><br/>
+## datePicker
+
+<img src="https://user-images.githubusercontent.com/86367196/134400757-89c84129-3a98-4b78-ae61-7725e550084c.png" width="380" object-fit="cover">
+
+#### Basic datePicker
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a date", selection: $wakeUp)
+    }
+}
+```
+<br/><br/>
+## Different DatePickerStyles:
+#### (If one is not chosen the iOS generic will be adopted automatically)
+
+<img src="https://user-images.githubusercontent.com/86367196/134400718-791cafb9-dde3-4bd4-8a6f-c8f464d6f91d.png" width="570" object-fit="cover">
+
+#### Wheel: 
+Image 1 (the leftmost image) 
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a date", selection: $wakeUp)
+            .labelsHidden()
+            .datePickerStyle(WheelDatePickerStyle())
+    }
+}
+```
+#### Compact:
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a date", selection: $wakeUp)
+            .labelsHidden()
+            .datePickerStyle(CompactDatePickerStyle()) //only in iOS 14
+    }
+}
+```
+#### Graphical:
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a date", selection: $wakeUp)
+            .labelsHidden()
+            .datePickerStyle(GraphicalDatePickerStyle()) //only in iOS 14
+    }
+}
+```
+#### Default:
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a date", selection: $wakeUp)
+            .labelsHidden()
+            .datePickerStyle(DefaultDatePickerStyle()) //Wheel in iOS 13 and Compact in iOS 14
+    }
+}
+```
+<br/><br/>
+## Examples of different DataPicker setups
+
+<img src="https://user-images.githubusercontent.com/86367196/134400427-3ca29832-c582-451f-86db-d1a33590ad75.png" width="760" object-fit="cover">
+
+#### DatePicker just for hours and minutes
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a hour:", selection: $wakeUp, displayedComponents: .hourAndMinute)
+            .labelsHidden()
+    }
+}
+```
+
+#### DatePicker just for the date 
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a hour:", selection: $wakeUp, displayedComponents: .date)
+            .labelsHidden()
+    }
+}
+```
+#### Date as the start 
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a hour:", selection: $wakeUp, in: Date()...)
+            .labelsHidden()
+            .datePickerStyle(GraphicalDatePickerStyle())
+    }
+}
+```
+#### Date as the end
+
+```Swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var wakeUp = Date()
+    
+    var body: some View {
+        DatePicker("Please enter a hour:", selection: $wakeUp, in: …Date())
+            .labelsHidden()
+            .datePickerStyle(GraphicalDatePickerStyle())
     }
 }
 ```
